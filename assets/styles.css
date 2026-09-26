@@ -353,6 +353,7 @@ p { margin: 0 0 1em; }
   .site-header .wrap { position: relative; flex-wrap: wrap; }
   .header-cta { display: none; }
   .grid-3, .features { grid-template-columns: 1fr; }
+  .card-media { height: clamp(250px, 64vw, 400px); min-height: 0; aspect-ratio: auto; }
   .section { padding: 46px 0; }
   .section-head { margin-bottom: 26px; }
   .hero { padding: 48px 0 44px; }
