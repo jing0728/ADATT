@@ -328,25 +328,71 @@ p { margin: 0 0 1em; }
 }
 
 @media (max-width: 720px) {
-  .nav-toggle { display: block; }
+  .wrap { padding-right: 18px; padding-left: 18px; }
+  .topbar { font-size: .75rem; }
+  .topbar .wrap { justify-content: center; gap: 4px 12px; padding-top: 8px; padding-bottom: 8px; }
+  .topbar .tb-list { justify-content: center; gap: 4px 14px; }
+  .site-header .wrap { min-height: 68px; gap: 12px; }
+  .brand { min-width: 0; gap: 8px; }
+  .brand-mark { min-width: 38px; height: 38px; padding: 0 7px; font-size: .82rem; }
+  .brand-name { font-size: 1.1rem; }
+  .brand-sub { font-size: .6rem; }
+  .nav-toggle { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; flex: 0 0 44px; }
   .nav {
     display: none;
     position: absolute;
     top: 100%; left: 0; right: 0;
     background: #fff;
     border-bottom: 1px solid var(--line);
-    padding: 12px 20px 18px;
+    padding: 8px 18px 14px;
     box-shadow: 0 16px 30px rgba(14,20,32,.12);
   }
   .nav.open { display: block; }
-  .nav ul { flex-direction: column; gap: 4px; }
-  .nav a { display: block; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .nav ul { flex-direction: column; gap: 0; }
+  .nav a { display: block; padding: 12px 4px; border-bottom: 1px solid var(--line); }
   .site-header .wrap { position: relative; flex-wrap: wrap; }
   .header-cta { display: none; }
   .grid-3, .features { grid-template-columns: 1fr; }
-  .section { padding: 56px 0; }
-  .hero { padding: 60px 0 56px; }
-  .table-scroll { overflow-x: auto; }
+  .section { padding: 46px 0; }
+  .section-head { margin-bottom: 26px; }
+  .hero { padding: 48px 0 44px; }
+  .hero-grid { gap: 28px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.65rem); }
+  .hero p.lede { font-size: 1rem; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .btn { flex: 1 1 150px; text-align: center; padding: 12px 16px; }
+  .hero-card, .contact-box { padding: 20px; }
+  .spec-list li { gap: 10px; font-size: .88rem; }
+  .spec-list li span { text-align: right; }
+  .stats .wrap { gap: 18px 12px; padding-top: 22px; padding-bottom: 22px; }
+  .stat b { font-size: 1.55rem; }
+  .stat span { font-size: .72rem; }
+  .page-head { padding: 42px 0 38px; }
+  .card-body { padding: 18px 18px 20px; }
+  .card-meta { flex-wrap: wrap; }
+  .contact-grid { gap: 24px; }
+  .contact-line .value { font-size: 1rem; }
+  .cta-band { padding: 44px 0; }
+  .footer-grid { gap: 26px 20px; }
+  .site-footer { padding-top: 42px; }
+  .table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table { min-width: 560px; }
+}
+
+@media (max-width: 380px) {
+  .wrap { padding-right: 15px; padding-left: 15px; }
+  .topbar .wrap { align-items: flex-start; }
+  .topbar .tb-list { gap: 3px 10px; }
+  .brand-name { font-size: 1rem; }
+  .brand-sub { letter-spacing: .16em; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; }
+}
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
 /* Spec list on light backgrounds */
