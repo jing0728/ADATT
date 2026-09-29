@@ -9,6 +9,10 @@ node_modules/
 # Vercel local project settings
 .vercel/
 
+# Local source asset drops
+ADATT图片/
+ADATT-LOGO版/ADATT_Box.png
+
 # Logs
 *.log
 npm-debug.log*
